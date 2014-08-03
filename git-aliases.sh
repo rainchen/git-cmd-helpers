@@ -45,7 +45,7 @@ alias git-log-oneline='git log --pretty=oneline'
 alias git-log-graph='git log --graph --decorate'
 
 alias git-log-last='git log -n 1'
-alias git-log-first='git log $(git log --pretty=format:%H|tail -1)'
+alias git-log-first='git log `git log --pretty=format:%H|tail -1`'
 
 # shows commits from start.
 alias git-log-reverse="git log --reverse"
@@ -143,9 +143,9 @@ alias git-diff-new-files-tobecommitted='git diff --name-only --diff-filter=A HEA
 # ==== for Untracked files ====
 alias git-list-untracked-files='git ls-files -o --exclude-standard'
 alias git-list-staged-untracked-files='git diff --name-only --diff-filter=A HEAD'
-alias git-add-untracked-files='git add $(git ls-files -o --exclude-standard); git status'
-alias git-del-untracked-files='del $(git ls-files -o --exclude-standard); git status'
-alias git-unstage-untracked-files='git reset HEAD $(git diff --name-only --diff-filter=A HEAD); git status'
+alias git-add-untracked-files='git add `git ls-files -o --exclude-standard`; git status'
+alias git-del-untracked-files='del `git ls-files -o --exclude-standard`; git status'
+alias git-unstage-untracked-files='git reset HEAD `git diff --name-only --diff-filter=A HEAD`; git status'
 # http://stackoverflow.com/questions/3801321/git-list-only-untracked-files-also-custom-commands
 # NOTICE: this will also delete files marked in .gitignore, e.g.: config/database.yml
 # NOT RECOMMEND TO USE
