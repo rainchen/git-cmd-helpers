@@ -109,6 +109,8 @@ alias git-last-commit-id='git rev-parse --short HEAD'
 # alias git-last-commit-id='git log -1 --pretty=oneline --abbrev-commit|cut -c1-7'
 alias git-last-commit-id-full='git log -1 --pretty=oneline |cut -c1-40'
 
+alias git-last-commit-message='git log -1 --pretty=%B'
+
 alias git-commits-count="git rev-list HEAD | wc -l | awk '{print \$1}'"
 
 # http://stackoverflow.com/questions/927358/git-undo-last-commit
