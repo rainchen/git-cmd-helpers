@@ -11,6 +11,7 @@ a bundle of aliases/functions wrapping some commonly used/useful git command usi
 * `git-aliases.sh`: some `alias` wrapping some commonly used/useful git command using humanize,directviewing name
 * `git-functions.sh`: commands wrapping using `function`, support arguments
 * `github-functions.sh`: some shortcuts for accessing github.com
+* `gitlab-functions.sh`: some shortcuts for accessing a gitlab website
 
 # Other popular git helpers
 
