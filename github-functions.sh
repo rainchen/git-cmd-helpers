@@ -31,3 +31,5 @@ function github-send-pull-request {
   # echo $github_pr_url
   open $github_pr_url
 }
+
+alias github-send-pull-request-to-develop='github-send-pull-request develop'
