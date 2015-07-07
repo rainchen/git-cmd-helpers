@@ -227,6 +227,12 @@ alias gitx.="open /Applications/GitX.app ."
 # Requirement 'gnuplot': $ brew install gnuplot
 alias git-stats="gitstats . git-stats"
 
+## ==== for resolving conflicts
 
+# Resolve Git merge conflicts in favor of their changes during a pull
+alias git-pull-using-theirs='git pull -s recursive -X theirs'
 
+# Resolve Git merge conflicts in favor of their changes
+# e.g.: git-merge-using-theirs other_branch
+alias git-merge-using-theirs='git merge -X theirs'
 
