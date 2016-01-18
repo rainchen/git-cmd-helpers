@@ -54,6 +54,7 @@ alias git-log-reverse="git log --reverse"
 alias git-log-webview='git instaweb --local --httpd=webrick'
 alias git-log-webview-stop='git instaweb --stop'
 
+alias git-log-treeview='git log --graph --oneline --all'
 
 
 # ==== for git status ====
