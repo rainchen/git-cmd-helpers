@@ -12,7 +12,7 @@ alias git-current-branch='git rev-parse --abbrev-ref HEAD'
 # http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-are-already-merged
 # To delete all branches that are already merged into the currently checked out branch(skip master and develop):
 alias git-delete-remote-branches-merged-into-current='git branch --merged | grep -v "\*" | grep -v master | grep -v develop | xargs -n 1 git branch -d'
-alias git-delete-local-branches-deleted-from-remote='git fetch --prune'
+alias git-delete-local-branches-deleted-from-remote="git fetch --all -p; git branch -vv | grep ': gone]' | awk '{ print \$1 }' | xargs -n 1 git branch -d"
 
 # show all remote branches that have already been merged into master
 alias git-remote-branches-merged='git branch -r --merged'
