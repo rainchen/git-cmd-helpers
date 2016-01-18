@@ -50,6 +50,9 @@ alias git-log-first='git log `git log --pretty=format:%H|tail -1`'
 # shows commits from start.
 alias git-log-reverse="git log --reverse"
 
+# display git log with browser at http://localhost:1234
+alias git-log-webview='git instaweb --local --httpd=webrick'
+alias git-log-webview-stop='git instaweb --stop'
 
 
 
