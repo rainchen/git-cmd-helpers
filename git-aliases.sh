@@ -131,6 +131,8 @@ alias git-commits-top='git shortlog -s -n'
 alias git-commits-list="git shortlog | grep -E '^[^ ]'"
 
 alias git-commits-first="git log --pretty=oneline --reverse | head -1"
+alias git-commits-last="git log -1"
+alias git-commits-last-time="git log -1 --format=%cd"
 
 
 
