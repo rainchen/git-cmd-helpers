@@ -184,6 +184,8 @@ alias git-apply-patch='patch -p0 <'
 # ==== for git tag ====
 # list tags
 alias git-tag='git tag'
+alias git-tag-ref='git show-ref --tags'
+alias git-tag-verbose='git log --oneline --decorate --tags --no-walk'
 
 # tips for adding new tag
 # $ git tag -a v1.2 -m 'tag v1.2'
