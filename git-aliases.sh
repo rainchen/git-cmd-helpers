@@ -85,6 +85,7 @@ alias git-checkout-deleted='git ls-files -d | xargs git checkout'
 # http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from/16880000#16880000
 alias git-remote-url='git ls-remote --get-url'
 alias git-config-get-remote-origin-url='git config --get remote.origin.url'
+alias git-config-set-remote-origin-url='echo old remote.origin.url:; git config remote.origin.url; git remote set-url origin'
 
 
 
