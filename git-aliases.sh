@@ -236,11 +236,23 @@ alias gitx.="open /Applications/GitX.app ."
 
 
 ## ==== for gitstats ====
+# [DEPRECATED] keep for reference only
 # gitstats is a statistics generator for git repositories. Currently it produces only HTML output with tables and graphs.
 # git://repo.or.cz/gitstats.git
 # usage: $ git-stats <path> <output-folder>
 # Requirement 'gnuplot': $ brew install gnuplot
-alias git-stats="gitstats . git-stats"
+# demo: http://gitstats.sourceforge.net/examples/gitstats/
+# alias git-stats="gitstats . git-stats"
+
+# GitStats is a git repository statistics generator. It browses the repository and outputs html page with statistics.
+# https://github.com/tomgi/git_stats
+# demo: http://tomgi.github.io/git_stats/examples/rails/general.html
+# install git_stats: gem install git_stats
+# git_stats usage:
+# $ git_stats generate
+# $ open git_stats/index.html
+alias git-stats='git_stats generate;open git_stats/index.html'
+
 
 ## ==== for resolving conflicts
 
