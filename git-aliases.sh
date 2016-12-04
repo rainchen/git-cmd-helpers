@@ -179,6 +179,12 @@ alias git-build-patch='git diff --cached --no-prefix > patchfile.diff; ls patchf
 # usage: $ git-apply-patch ../vendors/local_production_patch.diff
 alias git-apply-patch='patch -p0 <'
 
+# Generate a git patch(with committing info) for a specific commit
+# usage: git-build-patch-for <sha>
+alias git-build-patch-for='git format-patch -1'
+# apply patch(with committing info)
+# usage: git-apply-patch-from 0001-fix-bug.patch
+alias git-apply-patch-from='git am <'
 
 
 
