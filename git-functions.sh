@@ -88,3 +88,34 @@ function git-tag-delete-local { git tag -d $1; };
 # function git-tag-delete-remote { git push origin :refs/tags/$1; };
 function git-tag-delete-remote { git push origin :$1; };
 
+
+# ==== for git commit ====
+
+# delete a commit and rebase the branch
+# usage: git-commits-delete <commit-id>
+function git-commits-delete {
+  local target_commit_id=$1
+  if [[ $target_commit_id == '' ]]; then
+    echo "Please pass the commit id"
+  else
+    local commit_info=`git log --pretty=oneline | grep $target_commit_id`
+    local commit_num=`git log --pretty=oneline | grep -n $target_commit_id | cut -d: -f 1`
+    # echo "target_commit_id:$target_commit_id, commit_num: $commit_num"
+    if [[ $commit_num == '' ]]; then
+      echo "Not found commit for $target_commit_id"
+    else
+      echo "Going to remove: $commit_info"
+      local pre_commit_num=`expr $commit_num - 1`
+      local current_branch=`git-current-branch`
+      local confirm_message="This will rebase your current branch \"$current_branch\", are you sure?(type 'y' to continue, any else to abort): "
+      read -p "$confirm_message" -n 1 -r
+      echo # move to a new line
+      if [[ $REPLY =~ ^[Yy]$ ]]; then
+        git rebase --onto $current_branch~$commit_num $current_branch~$pre_commit_num $current_branch
+        echo "Done"
+      else
+        echo "Aborted"
+      fi
+    fi
+  fi
+}
