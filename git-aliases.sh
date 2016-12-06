@@ -112,7 +112,8 @@ alias git-pull-master='git checkout master; git pull;'
 alias git-last-commit-id='git rev-parse --short HEAD'
 # a longer version
 # alias git-last-commit-id='git log -1 --pretty=oneline --abbrev-commit|cut -c1-7'
-alias git-last-commit-id-full='git log -1 --pretty=oneline |cut -c1-40'
+alias git-last-commit-id='git rev-parse HEAD'
+alias git-last-commit-id-short='git rev-parse --short HEAD'
 
 alias git-last-commit-message='git log -1 --pretty=%B'
 
