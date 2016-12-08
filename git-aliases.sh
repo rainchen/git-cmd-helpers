@@ -194,6 +194,10 @@ alias git-apply-patch-from='git am <'
 alias git-tag='git tag'
 alias git-tag-ref='git show-ref --tags'
 alias git-tag-verbose='git log --oneline --decorate --tags --no-walk'
+# delete all local tags and fetch from remote
+alias git-tag-reset-with-remote='git tag -l | xargs git tag -d;git fetch --tags'
+# delete local tags deleted from remote
+alias git-tag-prune='git fetch --prune origin "+refs/tags/*:refs/tags/*"'
 
 # tips for adding new tag
 # $ git tag -a v1.2 -m 'tag v1.2'
