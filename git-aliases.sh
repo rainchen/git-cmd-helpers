@@ -198,6 +198,7 @@ alias git-tag-verbose='git log --oneline --decorate --tags --no-walk'
 alias git-tag-reset-with-remote='git tag -l | xargs git tag -d;git fetch --tags'
 # delete local tags deleted from remote
 alias git-tag-prune='git fetch --prune origin "+refs/tags/*:refs/tags/*"'
+alias git-tag-push-all='git push --tags'
 
 # tips for adding new tag
 # $ git tag -a v1.2 -m 'tag v1.2'
