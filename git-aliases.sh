@@ -274,7 +274,7 @@ alias gitx.="open /Applications/GitX.app ."
 alias git-stats='git_stats generate;open git_stats/index.html'
 
 
-## ==== for resolving conflicts
+## ==== for resolving conflicts ====
 
 # Resolve Git merge conflicts in favor of their changes during a pull
 alias git-pull-using-theirs='git pull -s recursive -X theirs'
@@ -283,3 +283,7 @@ alias git-pull-using-theirs='git pull -s recursive -X theirs'
 # e.g.: git-merge-using-theirs other_branch
 alias git-merge-using-theirs='git merge -X theirs'
 
+
+## ==== for stash ====
+# This command will create a stash with ALL of your changes (staged and unstaged), but will leave the staged changes in your working directory (still in state staged).
+alias git-stash-unstaged='git stash --keep-index'
