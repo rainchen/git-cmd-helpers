@@ -1,5 +1,10 @@
 # here are some alias wrapping some commonly used/useful git command using humanize,directviewing name
 
+# ==== for git clone ====
+# copy only the latest revision in the repository, userful for trying opensource project
+alias git-shallow-clone='git clone --depth 1'
+# to backfill history: git pull --unshallow
+
 # ==== for git branch ====
 alias gb='git branch'
 alias gbv='git branch -v'
