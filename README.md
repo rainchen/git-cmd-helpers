@@ -12,6 +12,7 @@ a bundle of aliases/functions wrapping some commonly used/useful git command usi
 * `git-functions.sh`: commands wrapping using `function`, support arguments
 * `github-functions.sh`: some shortcuts for accessing github.com
 * `gitlab-functions.sh`: some shortcuts for accessing a gitlab website
+* `bitbucket-functions.sh`: some shortcuts for accessing a bitbucket website
 
 # Other popular git helpers
 
