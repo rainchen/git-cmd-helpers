@@ -214,6 +214,13 @@ alias git-tag-reset-with-remote='git tag -l | xargs git tag -d;git fetch --tags'
 alias git-tag-prune='git fetch --prune origin "+refs/tags/*:refs/tags/*"'
 alias git-tag-push-all='git push --tags'
 
+# get latest tag
+alias git-tag-latest-commit-id='git rev-list --tags --max-count=1'
+# get latest tag name (Notes: This command returns the "newest" tag even this tag is on another branch)
+alias git-tag-latest='git-tag-latest-commit-id | xargs git describe --tags'
+alias git-tag-latest-verbose='git-tag-latest-commit-id | xargs git log --oneline --decorate --no-walk'
+alias git-tag-latest-checkout='git-tag-latest-verbose; git-tag-latest | xargs -I @ git checkout tags/@ -b @'
+
 # tips for adding new tag
 # $ git tag -a v1.2 -m 'tag v1.2'
 # $ git push origin v1.2
