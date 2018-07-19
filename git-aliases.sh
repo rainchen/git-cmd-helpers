@@ -35,6 +35,11 @@ alias git-delete-remote-branches-mereged-into-develop='git-sweep cleanup --maste
 # git branch -m <newname>
 alias git-branch-rename-to='git branch -m '
 
+# show all remote branches, with branch name, commit date, author name, commit id, commit message
+alias git-branch-list-remote="git for-each-ref --format='%(refname:short)|%(committerdate:short) (%(committerdate:relative))|%(authorname)|%(objectname:short)|%(contents:subject)' --sort=committerdate refs/remotes/ | column -t -s '|'"
+
+# show all local branches, with branch name, commit date, author name, commit id, commit message
+alias git-branch-list-local="git for-each-ref --format='%(refname:short)|%(committerdate:short) (%(committerdate:relative))|%(authorname)|%(objectname:short)|%(contents:subject)' --sort=committerdate refs/heads/ | column -t -s '|'"
 
 
 # ==== for git log ====
