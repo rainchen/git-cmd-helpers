@@ -65,9 +65,10 @@ alias git-log-treeview-pretty="git log --graph --pretty=format:'%Cred%h%Creset -
 # In case you were curious what the different options were: %h = abbreviated commit hash, %x09 = tab (character for code 9), %an = author name, %ad = author date (format respects --date= option), %s = subject. From kernel.org/pub/software/scm/git/docs/git-log.html (PRETTY FORMATS section)
 # alias git-log-listview="git log --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short | column -ts'|' | less -r"
 # https://stackoverflow.com/a/9463536/130353
-alias git-log-listview="git log --pretty=format:'%C(auto,yellow)%h%C(auto,magenta) %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D' --date=short"
+alias git-log-listview="git log --pretty=format:'%C(auto,yellow)%h%C(auto,magenta) %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D' --date=short"
 
 # this is useful for writting changes logs
+# e.g.: git-log-listview-no-merges v0.1..v0.2 --author="MyName"
 alias git-log-listview-no-merges="git-log-listview --no-merges"
 
 
