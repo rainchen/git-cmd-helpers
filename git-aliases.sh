@@ -104,7 +104,8 @@ alias git-checkout-b='git checkout -b'
 
 alias git-checkout-deleted='git ls-files -d | xargs git checkout'
 
-
+# discard all your modified files
+alias git-discard-modified='git ls-files -m | xargs git checkout --'
 
 
 # ==== for git remote config ====
