@@ -31,7 +31,7 @@ alias git-remote-branches-merged='git branch -r --merged'
 
 # Using git-sweep you can safely remove remote branches that have been merged into master.
 # https://github.com/arc90/git-sweep
-# sudo easy_install git-sweep
+# install: pip install git-sweep || easy_install git-sweep
 # $ git-sweep cleanup
 # after clean up, Tell everyone to run `git fetch --prune` to sync with this remote.
 alias git-delete-remote-branches-mereged-into-master='git-sweep cleanup --skip develop'
