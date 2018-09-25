@@ -18,6 +18,9 @@ alias git-current-branch='git rev-parse --abbrev-ref HEAD'
 # In Git 1.8.1 you can use the git symbolic-ref command with the "--short" option:
 # alias git-current-branch='git symbolic-ref --short HEAD'
 
+# usage: git-delete-remote-branch the_remote_branch_name
+alias git-delete-remote-branch='git push origin --delete'
+
 # http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-are-already-merged
 # To delete all branches that are already merged into the currently checked out branch(skip master and develop):
 alias git-delete-remote-branches-merged-into-current='git branch --merged | grep -v "\*" | grep -v master | grep -v develop | xargs -n 1 git branch -d'
