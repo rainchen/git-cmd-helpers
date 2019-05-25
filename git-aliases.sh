@@ -200,6 +200,7 @@ alias git-unstage-untracked-files='git reset HEAD `git diff --name-only --diff-f
 # ==== for git flow ====
 # brew install git-flow
 # https://github.com/nvie/gitflow/wiki/Mac-OS-X
+alias git-flow-cheatsheet='open https://danielkummer.github.io/git-flow-cheatsheet/'
 alias git-flow-init-push='git flow init;git push -u origin develop;'
 
 
