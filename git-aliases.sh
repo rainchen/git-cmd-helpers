@@ -83,6 +83,11 @@ alias git-log-listview="git log --pretty=format:'%C(auto,yellow)%h%C(auto,magent
 # e.g.: git-log-listview-no-merges v0.1..v0.2 --author="MyName"
 alias git-log-listview-no-merges="git-log-listview --no-merges"
 
+# show commit messages(in reverse order) in current branch
+# useful for writing changes in a PR
+# alias git-changes-in-current-branch="git log --reverse --pretty=format:'%s' $(git merge-base master HEAD)..HEAD"
+alias git-changes-in-current-branch="git merge-base master HEAD | xargs -I @ git log --reverse --pretty=format:'%s' @..HEAD"
+alias git-changes-in-current-branch-v="git cherry -v master"
 
 # ==== for git status ====
 alias gs='git status'
