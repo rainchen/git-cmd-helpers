@@ -243,8 +243,18 @@ alias git-tag-latest-verbose='git-tag-latest-commit-id | xargs git log --oneline
 alias git-tag-latest-checkout='git-tag-latest-verbose; git-tag-latest | xargs -I @ git checkout tags/@ -b @'
 
 # tips for adding new tag
-# $ git tag -a v1.2 -m 'tag v1.2'
+# $ git tag -a v1.2 -m 'tag: v1.2'
 # $ git push origin v1.2
+
+# tips for editing a tag
+# How do I edit an existing tag message in git?
+# refs: https://stackoverflow.com/questions/7813194/how-do-i-edit-an-existing-tag-message-in-git
+# git tag <tag name> <tag name>^{} -f -m "<new message>"
+# .e.g.:
+# git tag v0.1.0 v0.1.0^{} -f -m "tag: v0.1.0"
+# or using:
+# git tag <tag name> <tag name> -f -a
+# This will open an editor with the contents of your old tag message.
 
 # tips for deleting a tag
 # If you have a tag named '12345' then you would just do this:
