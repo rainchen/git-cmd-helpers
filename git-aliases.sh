@@ -5,9 +5,10 @@
 alias git-shallow-clone='git clone --depth 1'
 # to backfill history: git pull --unshallow
 
-# add an alias: `git up`
 # fetch and rebase all locally-tracked remote branches
-# git config --global alias.up 'pull --rebase --autostash'
+alias git-up='git pull --rebase --autostash'
+# add an git alias: `git up`
+alias git-up-alias='git config --global alias.up "pull --rebase --autostash"'
 
 # ==== for git branch ====
 alias gb='git branch'
