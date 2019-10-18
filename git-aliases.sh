@@ -63,7 +63,7 @@ alias git-log-oneline='git log --pretty=oneline'
 alias git-log-graph='git log --graph --decorate'
 
 alias git-log-last='git log -n 1'
-alias git-log-first='git log `git log --pretty=format:%H|tail -1`'
+alias git-log-first='git log --pretty=format:%H|tail -1 | xargs git log'
 
 # shows commits from start.
 alias git-log-reverse="git log --reverse"
