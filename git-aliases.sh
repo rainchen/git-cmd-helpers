@@ -326,3 +326,11 @@ alias git-merge-using-theirs='git merge -X theirs'
 ## ==== for stash ====
 # This command will create a stash with ALL of your changes (staged and unstaged), but will leave the staged changes in your working directory (still in state staged).
 alias git-stash-unstaged='git stash --keep-index'
+
+
+## ==== for gitignore config ====
+
+# For more on global gitignores: https://help.github.com/articles/ignoring-files/#create-a-global-gitignore
+# $ git config --global core.excludesfile ~/.gitignore_global
+
+alias gitignore-for-macos='curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o macOS.gitignore; ls -lah macOS.gitignore'
